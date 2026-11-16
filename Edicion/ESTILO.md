@@ -1,13 +1,13 @@
 # Estilo de edición: Glow Studio
 
-Referencias analizadas: `referencias/ref1.mov` (reel de @hannarek, grabación de pantalla de Instagram, 14,6 s).
-Lo que le gusta al usuario, en sus palabras: "el dinamismo, colores que matchean con el entorno y seguimiento de los subtítulos".
-De esa referencia **solo** se toman esas tres cosas. Lo demás (estructura, b-roll, tema) no se copia salvo que se confirme.
+Referencias analizadas:
+- `referencias/ref1.mov` (reel de @hannarek, 14,6 s). Le gusta: "el dinamismo, colores que matchean con el entorno y seguimiento de los subtítulos". Solo se toman esas tres cosas.
+- `referencias/ref2.mov` (reel de @andybadilloo, 14,6 s). Le gusta: "cómo plantea solución, es gráfica, agrega memes, hace chistes y ayuda a alguien puntual".
 
 > Ojo: la caja gris chica de abajo ("tu casa si estás rentando…") son los subtítulos automáticos de Instagram, no son parte de la edición. No se imitan.
 
 ## Idea madre
-Texto grande que se va armando palabra por palabra al ritmo de la voz, con los colores sacados de lo que hay en cuadro. Se siente rápido y vivo, pero la persona sigue siendo la protagonista.
+Le habla a alguien puntual con un problema concreto y le da la solución, con humor. El texto sigue la voz palabra por palabra, los colores salen de lo que hay en cuadro y los memes refuerzan los chistes. Rápido y vivo, pero la persona sigue siendo la protagonista.
 
 ## Formato
 - 1080x1920, 30 fps, 15–30 s
@@ -29,19 +29,31 @@ Texto grande que se va armando palabra por palabra al ritmo de la voz, con los c
 - Frases de 3–6 palabras, máximo 3 renglones
 - Repeticiones habladas se apilan: "LO NECESITO." ×3 = 3 renglones iguales; "NO NO NO" = cada "NO" aparece en un lugar distinto alrededor de la persona
 - Puntuación: casi nada; punto final solo en frases remate ("LO NECESITO.")
+- Variante tranquila (ref2), para partes explicativas: **una sola palabra a la vez**, en minúscula normal, letra redonda y gruesa (tipo Fredoka Bold), ~100 px, top ~20 % (≈380 px). Cada palabra reemplaza a la anterior justo cuando se dice
+- Cuándo usar cada una: **armado en mayúsculas** para gancho, chistes y remate; **palabra a palabra** para la explicación o la solución
 
 ## Colores que matchean con el entorno
-- Regla: **cada frase toma un color de un objeto que está en cuadro en ese momento** (medido con cuentagotas sobre el video, saturado y oscuro para que contraste con la pared clara)
-- En la ref: rojo `#960024` (bufanda y reloj), azul marino `#02267A` (marcos de cuadros), amarillo `#F8BE06` (remate), blanco `#FFFFFF` (palabras sueltas)
-- Se va alternando color por frase, nunca dos frases seguidas del mismo color
-- Sobre fondo claro: colores oscuros o saturados. Amarillo solo si el fondo atrás es oscuro o medio
+**Es una regla, no una paleta fija.** Los colores de las referencias son solo ejemplos: en cada video se sacan de nuevo de lo que tiene la persona alrededor.
+1. Mirar el cuadro y elegir 2–3 objetos con color propio: ropa, accesorios, lámparas, cuadros, plantas, muebles.
+2. Sacar el color con cuentagotas de esos objetos y quedarse con el tono (el matiz), no con el valor exacto.
+3. Ajustar el brillo según lo que hay **detrás del texto**:
+   - Fondo claro → versión **oscura y saturada** del tono (ref1: pared blanca → rojo de la bufanda y azul marino de los marcos).
+   - Fondo oscuro → versión **clara y pastel** del tono (ref2: living oscuro → amarillo pálido `#FBF49E`, sacado de la luz cálida de las lámparas).
+4. Comprobar el contraste: texto contra fondo de 4,5:1 o más. Si no llega, oscurecer o aclarar más; no agregar contorno.
+5. Un color por frase, alternando (nunca el mismo dos frases seguidas). Blanco o el tono más neutro para palabras sueltas de transición.
+
+Antes de renderizar, anotar en el `config.json` de cada video de qué objeto sale cada color.
 
 ## Títulos fijos
 - No hay. El texto cinético cumple esa función.
 
 ## Imágenes, gráficos y b-roll
-- Insertos a **pantalla completa** de detalle del producto u objeto del que se habla, 2–4 s, entran y salen **en seco**
-- Durante el inserto el texto cinético se pausa
+- **Memes y recortes (ref2)**: personajes de películas o series, fotos o reacciones **sin fondo (recortados)**, que remiten al chiste o a la persona a la que se le habla (ref2: chicas de oficina de películas al decir "godín / trabajo de 9 a 5")
+  - Van en la **franja de abajo** (desde ~60 % de la altura hacia abajo), varios superpuestos, **nunca tapan la cara**
+  - Duran lo que dura la frase del chiste (~2–3 s), entran y salen **en seco**
+  - Siempre preguntarle al usuario qué meme o personaje usar; no elegir caras por cuenta propia
+- **Gráficos (ref2)**: cuando se plantea la solución, tarjeta simple con los pasos o la lista ("3 formas de…"), con los colores del entorno
+- **Insertos (ref1)**: detalle del producto u objeto a pantalla completa, 2–4 s, en seco. Durante el inserto el texto se pausa
 
 ## Marca
 - Colores: *(pendiente de confirmar por el usuario)* · Tipografía: Archivo Expanded Black · Logo: *(pendiente)*
@@ -50,9 +62,11 @@ Texto grande que se va armando palabra por palabra al ritmo de la voz, con los c
 - Voz normalizada a -14 LUFS · Música: *(por confirmar)* · Efectos: no
 
 ## Estructura
-- Gancho (0–3 s): frase con la palabra clave más grande ("LES TENGO UN HACK INCREÍBLE")
-- Desarrollo: reacción y explicación, con insertos del objeto
-- Remate: frase repetida apilada en amarillo
+- **Gancho (0–3 s)**: el problema o la situación, dicho a alguien puntual (ref2: "Si yo fuera godín o tuviera un trabajo de 9 a 5…"; ref1: "les tengo un hack increíble"). Texto armado grande + meme
+- **A quién le habla (3–6 s)**: nombra al público ("Amigas, yo sé que muchas aquí son godines…")
+- **Solución**: pasos concretos ("veo 3 formas…"), con gráfico o lista en pantalla, texto palabra a palabra
+- **Chistes**: reacciones exageradas o comparaciones, reforzadas con meme o con texto apilado ("NO NO NO", "LO NECESITO" ×3)
+- **Remate**: frase corta repetida o llamado a la acción
 
 ## Correcciones del usuario
 <!-- Una regla por línea, con fecha -->
