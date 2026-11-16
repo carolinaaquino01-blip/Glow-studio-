@@ -60,10 +60,8 @@ Antes de renderizar, anotar en el `config.json` de cada video de qué objeto sal
 
 ## Audio
 - Voz normalizada a -14 LUFS · Efectos: no
-- **Música de fondo: sí, siempre** (confirmado por el usuario, 16/11/2026)
-  - Bien baja, por debajo de la voz: unos 18–20 dB menos que la voz (≈ -32 LUFS), para que la voz se entienda siempre
-  - Arranca desde el primer cuadro y termina con el video, con 0,5 s de salida suave al final
-  - Estilo y tema: *(pendiente: que el usuario pase el archivo de audio o diga el género)*. Si el tema es de los populares de Instagram, conviene agregarlo en la app al publicar, así no lo silencian por derechos
+- **Música de fondo: la agrega el usuario en Instagram al publicar** (16/11/2026). El MP4 se entrega **solo con la voz**, sin música.
+  - Como después se suma música, la voz va limpia y normalizada a -14 LUFS, sin silencios largos
 
 ## Estructura
 - **Gancho (0–3 s)**: el problema o la situación, dicho a alguien puntual (ref2: "Si yo fuera godín o tuviera un trabajo de 9 a 5…"; ref1: "les tengo un hack increíble"). Texto armado grande + meme
@@ -74,3 +72,5 @@ Antes de renderizar, anotar en el `config.json` de cada video de qué objeto sal
 
 ## Correcciones del usuario
 <!-- Una regla por línea, con fecha -->
+- 16/11/2026: no copiar los colores exactos de las referencias; la regla es sacar los colores del entorno de cada video
+- 16/11/2026: no meter música en el render; la pone el usuario en Instagram
