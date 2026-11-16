@@ -59,7 +59,11 @@ Antes de renderizar, anotar en el `config.json` de cada video de qué objeto sal
 - Colores: *(pendiente de confirmar por el usuario)* · Tipografía: Archivo Expanded Black · Logo: *(pendiente)*
 
 ## Audio
-- Voz normalizada a -14 LUFS · Música: *(por confirmar)* · Efectos: no
+- Voz normalizada a -14 LUFS · Efectos: no
+- **Música de fondo: sí, siempre** (confirmado por el usuario, 16/11/2026)
+  - Bien baja, por debajo de la voz: unos 18–20 dB menos que la voz (≈ -32 LUFS), para que la voz se entienda siempre
+  - Arranca desde el primer cuadro y termina con el video, con 0,5 s de salida suave al final
+  - Estilo y tema: *(pendiente: que el usuario pase el archivo de audio o diga el género)*. Si el tema es de los populares de Instagram, conviene agregarlo en la app al publicar, así no lo silencian por derechos
 
 ## Estructura
 - **Gancho (0–3 s)**: el problema o la situación, dicho a alguien puntual (ref2: "Si yo fuera godín o tuviera un trabajo de 9 a 5…"; ref1: "les tengo un hack increíble"). Texto armado grande + meme
