@@ -1,0 +1,24 @@
+@keyframes rise{from{opacity:0;transform:translateY(34px)}to{opacity:1;transform:none}}
+@keyframes pop{0%{transform:scale(0)}70%{transform:scale(1.25)}100%{transform:scale(1)}}
+@keyframes draw{from{stroke-dashoffset:1}to{stroke-dashoffset:0}}
+@keyframes twinkle{0%,100%{transform:scale(1) rotate(0)}50%{transform:scale(.82) rotate(12deg)}}
+@keyframes nudge{0%,100%{transform:translateX(0)}50%{transform:translateX(16px)}}
+@keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.22)}}
+.anim .w{display:inline-block;animation:rise .55s cubic-bezier(.2,.7,.2,1) var(--d) both}
+.anim .save.w{display:inline-flex}
+.anim .sub.w{display:block}
+.anim .star{animation:twinkle 2.5s ease-in-out infinite}
+.anim .star:nth-of-type(2n){animation-delay:-1.25s}
+.anim .swipe{animation:rise .5s 2.3s both, nudge 1.25s 2.8s ease-in-out infinite}
+.anim .head{animation:rise .55s .1s both}
+.anim .item{animation:rise .55s both}
+.anim .item:nth-child(1){animation-delay:.55s} .anim .item:nth-child(2){animation-delay:1.5s} .anim .item:nth-child(3){animation-delay:2.4s}
+.anim .badge{transform-box:fill-box;transform-origin:center;animation:pop .45s both}
+.anim .item:nth-child(1) .badge{animation-delay:1.0s} .anim .item:nth-child(2) .badge{animation-delay:1.95s} .anim .item:nth-child(3) .badge{animation-delay:2.85s}
+.anim #s6 .badge{animation:pop .45s both, pulse 1.25s ease-in-out infinite}
+.anim #s6 .item:nth-child(1) .badge{animation-delay:1.0s,1.5s} .anim #s6 .item:nth-child(2) .badge{animation-delay:1.95s,2.5s} .anim #s6 .item:nth-child(3) .badge{animation-delay:2.85s,3.75s}
+.anim .ring2{display:block;position:absolute;left:-46px;right:-46px;top:-18px;bottom:-18px;width:calc(100% + 92px);height:calc(100% + 36px);overflow:visible;pointer-events:none}
+.anim .ring2 path{fill:none;stroke:#861724;stroke-width:2.6;stroke-linecap:round;stroke-dasharray:1 1;animation:draw .8s ease-in-out both}
+.anim #s2 .ring2 path{animation-delay:1.9s}
+.anim #s3 .item:nth-child(1) .ring2 path{animation-delay:1.25s}
+.anim #s3 .item:nth-child(2) .ring2 path{animation-delay:2.4s}

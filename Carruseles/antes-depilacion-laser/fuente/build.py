@@ -53,25 +53,25 @@ def slide(n, inner, g=(560, 300, 1050, 0), stars=()):
 S = []
 S.append(slide(1, f'''
 <div class="cover">
-  <div class="script c1">Si tenés</div>
-  <div class="big c2">TURNO<br>DE LÁSER</div>
-  <div class="save"><svg viewBox="0 0 40 52" class="bm"><path d="M4 4 H36 V48 L20 36 L4 48Z"/></svg>
+  <div class="script c1"><span class="w" style="--d:.1s">Si</span> <span class="w" style="--d:.3s">tenés</span></div>
+  <div class="big c2"><span class="w" style="--d:.6s">TURNO</span><br><span class="w" style="--d:.85s">DE</span> <span class="w" style="--d:1.05s">LÁSER</span></div>
+  <div class="save w" style="--d:1.5s"><svg viewBox="0 0 40 52" class="bm"><path d="M4 4 H36 V48 L20 36 L4 48Z"/></svg>
      <span class="script">guardá este post</span></div>
-  <div class="sub">esto hacé <span class="ser">(y esto</span> <b>NO</b><span class="ser">)</span><br>antes de tu sesión</div>
+  <div class="sub w" style="--d:1.9s">esto hacé <span class="ser">(y esto</span> <b>NO</b><span class="ser">)</span><br>antes de tu sesión</div>
 </div>
 <div class="swipe script">deslizá &gt;&gt;&gt;</div>''',
   g=(600, 520, 1100, -8), stars=((830, 110, 170, 8), (760, 230, 80, -10), (70, 1080, 110, 0))))
 
 S.append(slide(2, head("lo que", "NO tenés<br>que hacer", BORDO) + '<div class="items one">' +
   item("01", "pinza", "no", "Cera, pinza ni depiladora eléctrica",
-       "la semana previa. Arrancan el pelo de raíz, <em>y el láser necesita ese pelo para funcionar.</em>") + '</div>',
+       "<span class='hl'>la semana previa<svg class='ring2' viewBox='0 0 200 60' preserveAspectRatio='none'><path pathLength='1' d='M18 34 C14 12 70 4 112 6 C160 8 196 18 192 34 C188 50 140 58 96 56 C50 54 8 48 12 30 C14 20 30 12 52 9'/></svg></span>. Arrancan el pelo de raíz, <em>y el láser necesita ese pelo para funcionar.</em>") + '</div>',
   g=(-180, 560, 1000, 6), stars=((860, 120, 150, 10), (800, 240, 70, -6))))
 
 S.append(slide(3, head("lo que", "NO tenés<br>que hacer", BORDO) + '<div class="items">' +
   item("02", "sol", "no", "Sol, cama solar ni autobronceante",
-       "unas 2 semanas antes. Con la piel bronceada <em>aumenta el riesgo de manchas o quemaduras.</em>") +
+       "<span class='hl'>unas 2 semanas antes<svg class='ring2' viewBox='0 0 200 60' preserveAspectRatio='none'><path pathLength='1' d='M18 34 C14 12 70 4 112 6 C160 8 196 18 192 34 C188 50 140 58 96 56 C50 54 8 48 12 30 C14 20 30 12 52 9'/></svg></span>. Con la piel bronceada <em>aumenta el riesgo de manchas o quemaduras.</em>") +
   item("03", "exfol", "no", "Exfoliaciones ni peelings",
-       "en la zona los días previos.") + '</div>',
+       "en la zona <span class='hl'>los días previos<svg class='ring2' viewBox='0 0 200 60' preserveAspectRatio='none'><path pathLength='1' d='M18 34 C14 12 70 4 112 6 C160 8 196 18 192 34 C188 50 140 58 96 56 C50 54 8 48 12 30 C14 20 30 12 52 9'/></svg></span>.") + '</div>',
   g=(640, 640, 1000, -6), stars=((850, 110, 150, 8), (790, 230, 70, -10))))
 
 S.append(slide(4, head("lo que", "SÍ tenés<br>que hacer") + '<div class="items one">' +
@@ -104,6 +104,10 @@ S.append(slide(7, f'''
 </div>''',
   g=(-160, 420, 1100, -6), stars=((850, 100, 160, 10), (790, 220, 75, -8), (90, 1090, 110, 4))))
 
+ANIM_CSS = open(os.path.join(D,"anim.css")).read()
+import sys
+ANIM = "--anim" in sys.argv
+if ANIM: S = [S[i] for i in (0,1,2,5)]
 html = f'''<!doctype html><html><head><meta charset="utf-8"><style>
 @font-face{{font-family:Mont;font-weight:500;src:url({F}/montserrat/files/montserrat-latin-500-normal.woff2)}}
 @font-face{{font-family:Mont;font-weight:600;src:url({F}/montserrat/files/montserrat-latin-600-normal.woff2)}}
@@ -166,6 +170,8 @@ em{{font-style:normal;color:{BORDO};font-weight:600}}
 .pill svg{{width:54px;height:54px;fill:none;stroke:#F6F1E8;stroke-width:3.5;stroke-linejoin:round}}
 .biglogo{{display:block;width:300px;margin:110px auto 0;opacity:.9}}
 .slide#s7 .logo{{display:none}}
-</style></head><body>{"".join(S)}</body></html>'''
-open(os.path.join(D, "carrusel.html"), "w", encoding="utf-8").write(html)
+{ANIM_CSS if ANIM else ''}
+.hl{{position:relative;white-space:nowrap}} .ring2{{display:none}}
+</style></head><body class="{'anim' if ANIM else ''}">{"".join(S)}</body></html>'''
+open(os.path.join(D, "carrusel_anim.html" if ANIM else "carrusel.html"), "w", encoding="utf-8").write(html)
 print("ok")
