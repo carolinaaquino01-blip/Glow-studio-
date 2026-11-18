@@ -2,7 +2,18 @@
 
 Tomado del carrusel de ejemplo en Canva ("NINA — Carrusel diciembre", 1080x1350). Es una referencia de estilo, no una plantilla para copiar.
 
-## Colores
+## Paleta oficial (elegida por el usuario, 18/11/2026)
+| Color | Hex | Uso |
+|---|---|---|
+| Vino | `#531B24` | Fondo profundo, sombras del terciopelo, texto sobre claro |
+| Bordó | `#6A2931` | Fondo principal |
+| Taupe | `#C6B7A2` | Relieves, sombras de stickers y estrellas |
+| Beige | `#E7D8C3` | Texto destacado, servicios |
+| Marfil | `#F3ECE2` | Texto principal sobre bordó, logo claro |
+
+Estilo preferido: **texturas** (terciopelo arrugado, grano) y **elementos con volumen** (estrellas y stickers en relieve, con brillo y sombra). No le gusta lo demasiado simple.
+
+## Colores del ejemplo de Canva (referencia anterior)
 | Uso | Hex |
 |---|---|
 | Fondo (beige con textura de papel) | `#E8E3D8` |
