@@ -13,6 +13,8 @@ Tomado del carrusel de ejemplo en Canva ("NINA — Carrusel diciembre", 1080x135
 
 Estilo preferido: **texturas** (terciopelo arrugado, grano) y **elementos con volumen** (estrellas y stickers en relieve, con brillo y sombra). No le gusta lo demasiado simple.
 
+Fondo aprobado (18/11/2026): **vino tinto oscuro** líquido con ondas de gota y brillo (`Posteos/si-ves-borroso/fuente/wine.py`). Descartados: terciopelo con ruido ("parece humo") y pliegues de tela ("parece orgánico").
+
 ## Colores del ejemplo de Canva (referencia anterior)
 | Uso | Hex |
 |---|---|
