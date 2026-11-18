@@ -40,9 +40,9 @@ def liquid(h, depth):
     spec = np.clip(nx*Hx + ny*Hy + nz*Hz, 0, 1) ** 260
     sheen = np.clip(nx*Hx + ny*Hy + nz*Hz, 0, 1) ** 12
     diff = np.clip(nx*Lx + ny*Ly + nz*Lz, 0, 1)
-    base = ramp(depth, [(0, (28, 5, 10)), (.35, (58, 13, 22)), (.7, (90, 30, 40)), (1, (122, 36, 52))])
+    base = ramp(depth, [(0, (16, 2, 5)), (.35, (36, 6, 12)), (.7, (60, 15, 24)), (1, (84, 22, 34))])
     base *= (0.7 + 0.45 * diff)[..., None]
-    return base + spec[..., None] * np.array([255, 228, 222]) * 0.95 + sheen[..., None] * np.array([130, 45, 58]) * 0.28
+    return base + spec[..., None] * np.array([240, 200, 196]) * 0.8 + sheen[..., None] * np.array([110, 30, 44]) * 0.25
 
 if mode == "ondas":
     # gota que cae: anillos concéntricos que se apagan, más ondas suaves del líquido
