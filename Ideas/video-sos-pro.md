@@ -23,3 +23,15 @@ Reservá tu turno en Glow.
 S.O.S PRO es una reconstrucción profunda para pelo decolorado, quebradizo o castigado por la plancha.
 Repone proteínas desde adentro: más fuerza, más suavidad, menos frizz.
 Escribinos y reservá tu turno en Glow.
+
+## Guion final para grabar (voz en off, ~30 s)
+¿Tu pelo está elástico, se quiebra o quedó como chicle después de decolorarte?
+Esto es S.O.S PRO, de Ana Paula Carvalho.
+No es un alisado: es una reconstrucción que le devuelve a tu pelo la fuerza que perdió, desde adentro.
+Limpiamos, reconstruimos y sellamos con láser Photon, para que el tratamiento penetre y dure más.
+Ella pidió terminación lacia: pasamos la plancha a temperatura mínima y sellamos las puntas con óleo.
+En 40 minutos estás lista, con el pelo suave, fuerte y brillante.
+Reservá tu turno en Glow.
+
+Después (despues_pantalla.mov): misma clienta, terminación lacia a pedido, plancha a temperatura mínima para no deshidratar, sellado de cutículas con óleo de puntas.
+Texto en pantalla en el después: "terminación lacia a pedido ✦ plancha a temp. mínima + óleo de puntas".
